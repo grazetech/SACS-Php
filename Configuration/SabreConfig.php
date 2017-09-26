@@ -26,8 +26,26 @@ class SabreConfig
      */
     public function __construct()
     {
-        $this->restConfig = parse_ini_file("SabreRestConfig.ini");
-        $this->soapConfig = parse_ini_file("SabreSoapConfig.ini");
+        $basicConfig = [
+            'userId' => getenv('SABRE_USER_ID'),
+            'domain' => getenv('SABRE_DOMAIN'),
+            'clientSecret' => getenv('SABRE_CLIENT_SECRET'),
+        ];
+
+        $this->restConfig = array_merge($basicConfig, [
+            'environment' => (getenv('SABRE_REST_ENV')) ?: "https://api.test.sabre.com",
+            'formatVersion' => (getenv('SABRE_REST_FORMAT_VERSION')) ?: "V1",
+        ]);
+
+        $this->soapConfig = array_merge($basicConfig, [
+            "environment" => (getenv('SABRE_SOAP_ENV')) ?: "https://sws3-crt.cert.sabre.com",
+            "OTA_PingRQVersion" => "1.0.0",
+            "TravelItineraryReadRQVersion" => "3.6.0",
+            "PassengerDetailsRQVersion" => "3.2.0",
+            "IgnoreTransactionLLSRQVersion" => "2.0.0",
+            "BargainFinderMaxRQVersion" => "1.9.2",
+            "EnhancedAirBookRQVersion" => "3.2.0",
+        ]);
     }
 
     /**

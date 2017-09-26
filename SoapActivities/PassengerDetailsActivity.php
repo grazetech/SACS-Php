@@ -1,7 +1,8 @@
 <?php
 
-include_once 'soap/SabreSoapClient.php';
-include_once 'soap_activities/TravelItineraryReadActivity.php';
+use GrazeTech\SabreAPI\Configuration\SabreConfig;
+use GrazeTech\SabreAPI\Soap\SabreSoapClient;
+use GrazeTech\SabreAPI\Workflow\Activity;
 
 class PassengerDetailsActivity implements Activity {
     

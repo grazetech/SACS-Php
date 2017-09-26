@@ -1,5 +1,11 @@
 <?php
 
+use GrazeTech\SabreAPI\Configuration\SabreConfig;
+use GrazeTech\SabreAPI\Soap\SabreSoapClient;
+use GrazeTech\SabreAPI\Soap\XMLSerializer;
+use GrazeTech\SabreAPI\Workflow\Activity;
+use GrazeTech\SabreAPI\Workflow\SharedContext;
+
 class TravelItineraryReadActivity implements Activity {
 
     private $config;
@@ -8,7 +14,7 @@ class TravelItineraryReadActivity implements Activity {
         $this->config = SabreConfig::getInstance();
     }
 
-    public function run(&$sharedContext) {
+    public function run(SharedContext &$sharedContext) {
         $soapClient = new SabreSoapClient("TravelItineraryReadRQ");
         $soapClient->setLastInFlow(true);
         $doc = new DOMDocument();

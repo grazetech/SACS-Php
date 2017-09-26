@@ -1,6 +1,8 @@
 <?php
-include_once 'configuration/SabreConfig.php';
-include_once 'soap/SabreSoapClient.php';
+
+namespace GrazeTech\SabreAPI\Soap;
+
+use GrazeTech\SabreAPI\Configuration\SabreConfig;
 
 class SessionCreateRequest
 {

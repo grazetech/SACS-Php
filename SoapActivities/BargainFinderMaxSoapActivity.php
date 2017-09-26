@@ -1,8 +1,8 @@
 <?php
-include_once 'workflow/Activity.php';
-include_once 'soap/SabreSoapClient.php';
-include_once 'soap_activities/PassengerDetailsNameOnlyActivity.php';
-include_once 'soap/XMLSerializer.php';
+
+use GrazeTech\SabreAPI\Configuration\SabreConfig;
+use GrazeTech\SabreAPI\Soap\SabreSoapClient;
+use GrazeTech\SabreAPI\Workflow\Activity;
 
 class BargainFinderMaxSoapActivity implements Activity {
 

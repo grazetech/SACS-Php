@@ -1,7 +1,8 @@
 <?php
-include_once 'workflow/Activity.php';
-include_once 'soap/SabreSoapClient.php';
-include_once 'soap_activities/EnhancedAirBookActivity.php';
+
+use GrazeTech\SabreAPI\Configuration\SabreConfig;
+use GrazeTech\SabreAPI\Soap\SabreSoapClient;
+use GrazeTech\SabreAPI\Workflow\Activity;
 
 class PassengerDetailsNameOnlyActivity implements Activity {
 

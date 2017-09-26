@@ -1,5 +1,7 @@
 <?php
 
+namespace GrazeTech\SabreAPI\Soap;
+
 class XMLSerializer
 {
 

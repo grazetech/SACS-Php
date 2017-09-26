@@ -1,4 +1,5 @@
 <?php
+
 namespace GrazeTech\SabreAPI\Workflow;
 
 class Workflow

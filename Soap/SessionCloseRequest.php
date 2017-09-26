@@ -1,6 +1,6 @@
 <?php
-include_once 'configuration/SabreConfig.php';
-include_once 'soap/SabreSoapClient.php';
+
+namespace GrazeTech\SabreAPI\Soap;
 
 class SessionCloseRequest
 {

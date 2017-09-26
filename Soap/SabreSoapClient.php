@@ -1,13 +1,11 @@
 <?php
+
 namespace GrazeTech\SabreAPI\Soap;
 
-use GrazeTech\SabreAPI\Soap\XMLSerializer;
-use GrazeTech\SabreAPI\Soap\SabreSoapClient;
 use GrazeTech\SabreAPI\Workflow\SharedContext;
-use GrazeTech\SabreAPI\Soap\SessionCloseRequest;
 use GrazeTech\SabreAPI\Configuration\SabreConfig;
-use GrazeTech\SabreAPI\Soap\SessionCreateRequest;
-use GrazeTech\SabreAPI\Soap\IgnoreTransactionRequest;
+use SoapHeader;
+use SoapVar;
 
 class SabreSoapClient
 {

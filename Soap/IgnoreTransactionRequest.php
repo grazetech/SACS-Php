@@ -1,8 +1,11 @@
 <?php
+
 namespace GrazeTech\SabreAPI\Soap;
 
-use GrazeTech\SabreAPI\Soap\SabreSoapClient;
 use GrazeTech\SabreAPI\Configuration\SabreConfig;
+use SoapClient;
+use SoapFault;
+use SoapHeader;
 
 class IgnoreTransactionRequest
 {
@@ -50,7 +53,7 @@ class IgnoreTransactionRequest
     /**
      *
      * @param object $security
-     * @return \GrazeTech\SabreAPI\Soap\SoapHeader
+     * @return SoapHeader
      */
     private function createSecurityHeader($security)
     {
